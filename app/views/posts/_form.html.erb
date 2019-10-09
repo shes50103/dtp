@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field" style="position: relative;">
     <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
@@ -20,8 +20,32 @@
     <%= form.label :start %>
     <%= form.time_select :start %>
   </div>
+  <input type="text" id="">
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+
+
+<div class="container">
+    <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+              $('#post_title').datetimepicker();
+
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
+    </div>
+</div>
